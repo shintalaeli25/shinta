@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".ui.SecondFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,20 +13,19 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:text="Nama Peramal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="44dp"
+            android:text="Nama "
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/nameEditTextText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="252dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:inputType="text"
             app:layout_constraintStart_toStartOf="@+id/textView"
@@ -58,7 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Tanggal lahir"
+            android:text="Posisi yang dilamar"
             app:layout_constraintEnd_toEndOf="@+id/addressEditText"
             app:layout_constraintStart_toStartOf="@+id/addressEditText"
             app:layout_constraintTop_toBottomOf="@+id/addressEditText" />

@@ -10,7 +10,7 @@ import kotlinx.parcelize.Parcelize
 data class Jobdesk (
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val title: String,
-    val category: String,
-    val content: String
+    val name: String,
+    val address: String,
+    val posicion: String
         ) : Parcelable
