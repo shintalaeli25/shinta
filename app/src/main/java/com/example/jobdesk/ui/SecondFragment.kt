@@ -54,19 +54,19 @@ class SecondFragment : Fragment() {
         }
         val name = binding.nameEditTextText.text
         val address = binding.addressEditText.text
-        val ttlEditText = binding.ttlEditText.text
+        val posicion = binding.posicionEditText.text
 
         binding.saveButton.setOnClickListener {
             //update
             if(name.isEmpty() || address.isEmpty() || posicion.isEmpty()){
                 if (name.isEmpty()){
-                    Toast.makeText(context, "Title is required", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "name is required", Toast.LENGTH_SHORT).show()
                 }
                 if (address.isEmpty()){
-                    Toast.makeText(context, "Category is required", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "address is required", Toast.LENGTH_SHORT).show()
                 }
                 if (posicion.isEmpty()){
-                    Toast.makeText(context, "Content is required", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "posicion is required", Toast.LENGTH_SHORT).show()
                 }
             }else{
                 if (jobdeks == null){
