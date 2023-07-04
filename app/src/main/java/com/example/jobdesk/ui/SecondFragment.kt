@@ -57,8 +57,25 @@ class SecondFragment : Fragment() {
         val ttlEditText = binding.ttlEditText.text
 
         binding.saveButton.setOnClickListener {
-            val jobdesk = Jobdesk(0, name.toString(), address.toString(), ttlEditText.toString())
-            jobdeskViewModel.insert(jobdesk)
+            //update
+            if(name.isEmpty() || address.isEmpty() || posicion.isEmpty()){
+                if (name.isEmpty()){
+                    Toast.makeText(context, "Title is required", Toast.LENGTH_SHORT).show()
+                }
+                if (address.isEmpty()){
+                    Toast.makeText(context, "Category is required", Toast.LENGTH_SHORT).show()
+                }
+                if (posicion.isEmpty()){
+                    Toast.makeText(context, "Content is required", Toast.LENGTH_SHORT).show()
+                }
+            }else{
+                if (jobdeks == null){
+                    val course = Jobdeks(name = name.toString(), address = address.toString(), posicion = posicion.toString())
+                    jobdeksViewModel.insert(Jobdeks)
+                }else{
+                    val course = Jobdeks(id = Jobdeks?.id!!, name = name.toString(), address = address.toString(), posicion = posicion.toString())
+                    jobdeksViewModel.update(Jobdeks)
+                }
             findNavController().popBackStack() //un
         }
     }
